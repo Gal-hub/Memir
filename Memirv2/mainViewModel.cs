@@ -17,7 +17,7 @@ namespace Memirv2
         }
 
         private string ip;
-        public string Ip //The username propery for the binding
+        public string Ip //The Ip propery for the binding
         {
             get { return ip; }
             set
@@ -28,7 +28,7 @@ namespace Memirv2
         }
 
         private string port;
-        public string Port //The username propery for the binding
+        public string Port //The Port propery for the binding
         {
             get { return port; }
             set
