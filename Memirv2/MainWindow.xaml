@@ -1,0 +1,59 @@
+﻿<Window x:Class="Memirv2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Memirv2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="#8EE4AF">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="6*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Camera" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="#05386B" />
+
+        </Grid>
+        <Grid Grid.Column="1" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="6*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Mars Connection" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#05386B"/>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="10" Height="25" VerticalAlignment="Center">
+                <Label Content="IP:" FontWeight="Bold" HorizontalAlignment="Center" Foreground="#2E1114"/>
+                <TextBox Text="{Binding Ip, UpdateSourceTrigger=PropertyChanged}"  MinWidth="100" Height="25"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1" Margin="10" Height="25" VerticalAlignment="Center">
+                <Label Content="Port:" FontWeight="Bold" HorizontalAlignment="Center" Foreground="#2E1114" />
+                <TextBox Text="{Binding Port, UpdateSourceTrigger=PropertyChanged}" MinWidth="100" Height="25"/>
+            </StackPanel>
+
+            <ListBox Grid.Row="2" Grid.ColumnSpan="2" Margin="1">
+                <ListBoxItem>sub</ListBoxItem>
+                <ListBoxItem>sub</ListBoxItem>
+                <ListBoxItem>sub</ListBoxItem>
+            </ListBox>
+        </Grid>
+
+    </Grid>
+</Window>
